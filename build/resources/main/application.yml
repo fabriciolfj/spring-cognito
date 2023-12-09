@@ -1,0 +1,21 @@
+keySetURI: https://cognito-idp.us-east-2.amazonaws.com/us-east-2_Fmp7kCNyG/.well-known/jwks.json
+
+
+springdoc:
+  swagger-ui.path: /swagger-ui.html
+  api-docs.path: /openapi/v3/api-docs
+  packagesToScan: com.github.fabriciolfj.resourceserver
+  pathsToMatch: /**
+  cache.disabled: true
+
+
+swagger-ui:
+  oauth2-redirect-url: /swagger-ui/oauth2-redirect.html
+  oauth:
+    clientId: writer
+    # TODO: EXTERNALIZE!
+    clientSecret: secret-writer
+    useBasicAuthenticationWithAccessCodeGrant: true
+  oAuthFlow:
+    authorizationUrl: https://testfabricio.auth.us-east-2.amazoncognito.com/oauth2/authorize
+    tokenUrl: https://testfabricio.auth.us-east-2.amazoncognito.com/oauth2/token
